@@ -1,7 +1,6 @@
-FROM centos
-MAINTAINER inelliqit
-RUN yum -y update
-RUN yum -y install httpd
-COPY index.html /var/www/html
-ENTRYPOINT ["/user/sbin/httpd","-D","FOREGROUND"]
-EXPOSE 80
+FROM ubuntu
+MAINTAINER intelliqit
+RUN apt-get update
+RUN apt-get install -y nginx
+Enterypoint ["/user/sbin/nginx","-g","daemon off;"]
+expose 80
