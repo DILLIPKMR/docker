@@ -1,4 +1,4 @@
-FROM CENTOS
+FROM centos
 MAINTAINER inelliqit
 RUN yum -y update
 RUN yum -y install httpd
